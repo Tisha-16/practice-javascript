@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Event</title>
+  </head>
+  <body>
+    <h1>DOM Events</h1>
+    <button onclick="console.log(7)">Click me</button>
+    <input type="text" />
+
+    <!-- for click event handler  -->
+    <button onclick="makePink()">Make Pink</button>
+    <button onclick="makeRed()">Make Red</button>
+    <button id="btn">Whatever</button>
+
+    <!-- changing heading text using eventlistener  -->
+    <h1 id="page-title">Event Handler</h1>
+    <button id="btn-update">Update title</button>
+
+    <script>
+      function makePink() {
+        document.body.style.backgroundColor = "pink";
+      }
+      function makeRed() {
+        document.body.style.backgroundColor = "red";
+      }
+    </script>
+
+    <script src="./event.js"></script>
+  </body>
+</html>
