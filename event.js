@@ -18,3 +18,18 @@ document.getElementById("btn-update").addEventListener("click", function () {
   console.log(pageTitle);
   pageTitle.innerText = "updated page title text";
 });
+
+//handle input text
+document.getElementById("btn-name").addEventListener("click", function () {
+  console.log("update button clicked");
+
+  //get the next from the input field
+  const nameInput = document.getElementById("input-name");
+  console.log("nameInput");
+  const name = nameInput.value;
+  console.log("name", name);
+
+  //set the name
+  const namep = document.getElementById("name");
+  namep.innerText = name;
+});
