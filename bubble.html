@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubble and Stop Propagating</title>
+    <style>
+      body {
+        border: 2px solid red;
+        margin: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Explore Event Bubble</h1>
+    <section>
+      <h3>List of things</h3>
+      <ol id="item-list">
+        <li id="item-1">Lorem, ipsum.</li>
+        <li id="item-2">Eveniet, reiciendis?</li>
+        <li id="item-3">Autem, tempora.</li>
+        <li id="item-4">A, consequuntur?</li>
+        <li id="item-5">Assumenda, cupiditate.</li>
+        <li id="item-6">Neque, blanditiis.</li>
+      </ol>
+    </section>
+    <script>
+      document.getElementById("item-2").addEventListener("click", function () {
+        console.log("item 2 clicked");
+        event.stopPropagation(); //upore AR uthbe nah
+      });
+      document
+        .getElementById("item-list")
+        .addEventListener("click", function () {
+          console.log("ol clicked");
+        });
+    </script>
+  </body>
+</html>
